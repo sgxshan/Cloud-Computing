@@ -1,0 +1,7 @@
+flask
+boto3
+tensorflow
+scipy
+pillow
+zappa
+

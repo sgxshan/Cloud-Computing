@@ -1,0 +1,6 @@
+{
+    "dev2”: {
+        "app_function": "run.webapp", 
+        "s3_bucket": "zappa-xjd5iv8fg"
+    }
+}

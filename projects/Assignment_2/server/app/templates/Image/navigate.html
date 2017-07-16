@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+{{error_msg if error_msg !=None}}
+<style> body{text-align:center}</style>
+<div>
+    <a href="{{url_for('file_upload',UserId = UserId)}}">Image Upload</a>
+</div>
+<div>
+   <a href="{{url_for('img_select',UserId = UserId)}}">Image Selection</a>
+</div>
+<div>
+   <a href="{{url_for('img_display',UserId = UserId, Input_File = input_file)}}">Image Processing</a>
+</div>
+
+{% endblock %}

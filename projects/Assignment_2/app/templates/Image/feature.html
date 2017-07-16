@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+
+    <style>
+        table {
+           border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    <style> body{text-align:center}</style>
+</head>
+
+
+
+
+<table>
+    <tr>
+        {% for f in file %}
+        <td>
+         <img src = {{f}} width="200" height="200"/>
+        </td>
+        {% endfor %}
+    </tr>
+    <tr>
+        {% for Name in name %}
+        <td>
+           <a href="{{url_for('filter', file = Name, input=original)}}">{{Name}}</a>
+        </td>
+        {% endfor %}
+    </tr>
+</table>
+
+
+{% endblock %}

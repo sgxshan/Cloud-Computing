@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+{{error_msg if error_msg !=None}}
+<form action='{{url_for("upload", UserId = UserId)}}' method='post' enctype='multipart/form-data' onsubmit="return validateForm()">
+    <input type='file' id='new_file' name='new_file' accept='application'>
+    <input type="submit" value="Upload New File" />
+</form>
+
+{% endblock %}

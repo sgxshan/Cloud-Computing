@@ -1,0 +1,41 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+    <!-- Header Carousel -->
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Welcome to Worker Pool Management System!
+                </h1>
+            </div>
+        </div>
+
+        <hr>
+        <!-- Call to Action Section -->
+        <div class="well">
+            <div class="row">
+                <a class="btn btn-lg btn-default btn-block" href="{{url_for('login')}}">Click to Login</a>
+            </div>
+        </div>
+
+        <hr>
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="{{url_for('static', filename = 'js/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
+
+    <style> body{text-align:center}</style>
+
+
+{% endblock %}

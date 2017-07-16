@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+{{error_msg if error_msg !=None}}
+<div style="margin-top:50px;"></div>
+<form action = '{{url_for("user_create_save")}}'> 
+    <div> 
+        <label>UserName:</label> 
+        <input type='text' name='login' value='{{login if login != None}}'> 
+    </div>  
+    <div> 
+        <label>Password:</label>
+        <input type='password' name='password' value='{{password if password != None}}'> 
+    </div>
+     <style>body{text-align:center}</style>
+    <div><input type="submit" value="register"></div> 
+</form> 
+<style> body{text-align:center}</style>
+{% endblock %}

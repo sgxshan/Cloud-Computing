@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+{% for f in file %}
+  <a href="{{url_for('img_d', id = UserId, FileName= f[18:])}}"><img src = {{f}} /></a>
+{% endfor %}
+{% endblock %}

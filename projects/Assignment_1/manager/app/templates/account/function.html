@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  {{msg if msg !=None}}
+<div>
+    <a href="{{url_for('parameter')}}">Auto Scaling</a>
+</div>
+<div>
+    <a href="{{url_for('ec2_list')}}">EC2 List</a>
+</div>
+<div>
+    <a href="{{url_for('delete')}}">Delete User data</a>
+</div>
+<style> body{text-align:center}</style>
+{% endblock %}

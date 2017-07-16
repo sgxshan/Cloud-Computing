@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+
+    <style>
+        table {
+           border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<img src = {{f}} width="200" height="200"/></a>
+
+<table>
+    <tr>
+        <td>Name</td>
+        {% for n in name %}
+        <td>{{n}}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Probability</td>
+        {% for p in probability %}
+        <td>{{p}}</td>
+        {% endfor %}
+    </tr>
+
+    {{msg}}
+
+</table>
+
+
+
+<style> body{text-align:center}</style>
+
+{% endblock %}

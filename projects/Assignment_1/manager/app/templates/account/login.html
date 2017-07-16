@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  {{error_msg if error_msg !=None}}
+<form method='post' action='submit'>
+    <div>
+        <label for="username">Username:</label>
+        <input id="username" type="input" name="username" value="" />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input id="password" type="password" name="password" value="" />
+    </div>
+    <input type="submit" name="submit" value="login"/>
+</form>
+<style> body{text-align:center}</style>
+{% endblock %}

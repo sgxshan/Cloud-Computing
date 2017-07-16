@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+
+    <style>
+        table {
+           border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    <style> body{text-align:center}</style>
+</head>
+
+
+
+<table>
+    <tr>
+        {% for f in file %}
+        <td>
+            <a href="{{url_for('navigate', UserId = UserId, input_file=f)}}"><img src = "https://s3.amazonaws.com/ece1779-project/{{UserId}}/{{f}}"width="200" height="200"/></a>
+        </td>
+        {% endfor %}
+    </tr>
+</table>
+
+
+{% endblock %}
